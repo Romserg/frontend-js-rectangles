@@ -1,10 +1,10 @@
 ﻿function areIntersected(elem1, elem2) {
-	let horizontalSide1 = elem1.left + elem1.width;
-	let horizontalSide2 = elem2.left + elem2.width;
-	let verticalSide1 = elem1.top + elem1.height;
-	let verticalSide2 = elem2.top + elem2.height;
-	if (elem1.left >= horizontalSide2 || horizontalSide1 <= elem2.left ||
-		elem1.top >= verticalSide2 || verticalSide1 <= elem2.top)
+	let rightA = elem1.left + elem1.width;
+	let rightB = elem2.left + elem2.width;
+	let bottomA = elem1.top + elem1.height;
+	let bottomB = elem2.top + elem2.height;
+	if (elem1.left >= rightB || rightA <= elem2.left ||
+		elem1.top >= bottomB || bottomA <= elem2.top)
 		return false;
 	return true;
 }
